@@ -1,0 +1,44 @@
+{
+  "name": "task-begginer-backend-1",
+  "version": "1.0.0",
+  "author": "ECP",
+  "private": true,
+  "dependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.2.1",
+    "babel-register": "^6.24.0",
+    "bcrypt": "^1.0.2",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.1",
+    "db-migrate": "^0.11.11",
+    "db-migrate-mysql": "^1.1.10",
+    "dotenv-safe": "^4.0.3",
+    "express": "^4.17.1",
+    "joi": "^10.2.2",
+    "jsonwebtoken": "^7.3.0",
+    "lodash": "^4.17.15",
+    "npm-run-all": "^4.0.2",
+    "promise-mysql": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-standard": "^7.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": "8",
+    "npm": "5"
+  },
+  "scripts": {
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "migrate": "node migrate",
+    "dev": "run-p -s dev:server",
+    "dev:server": "nodemon -q -I -e js,json -i package.json -- -r babel-register index.js"
+  }
+}
